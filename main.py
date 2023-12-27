@@ -37,10 +37,10 @@ with open('books-en.csv', 'r') as file:
     reader = csv.reader(file)
     rows = [row for row in reader]
 
-random_indexes = random.sample(range(len(rows)), 20)
+random_index = random.sample(range(len(rows)), 20)
 
-random_rows = [rows[i] for i in random_indexes]
+random_col = [rows[i] for i in random_index]
 
 with open('list.csv', 'w', newline='') as file:
     writer = csv.writer(file)
-    writer.writerows(random_rows)
+    writer.writerows(random_col)
